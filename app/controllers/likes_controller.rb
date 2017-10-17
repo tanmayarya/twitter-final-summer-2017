@@ -1,6 +1,6 @@
 class LikesController < ApplicationController
 	before_action :authenticate_user!
-
+# likes controller
 	def toggle_like
 		@tweet = Tweet.find(params[:tweet_id])
 		like = Like.where(user: current_user, tweet: @tweet).first
